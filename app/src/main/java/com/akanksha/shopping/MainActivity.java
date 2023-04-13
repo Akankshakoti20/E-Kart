@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String UserPhoneKey =Paper.book().read(Prevalent.UserPhoneKey);
+        String UserPhoneKey =Paper.book().read(Prevalent.UserPhoneKey).toString();
         String UserPasswordKey = Paper.book().read(Prevalent.UserPasswordKey);
         if (UserPhoneKey != "" && UserPasswordKey != "")
         {
